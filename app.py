@@ -10,7 +10,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Tesla Stock Prediction API is Running"}git config --global user.name "Muhammed Faheem"
+    return {"message": "Tesla Stock Prediction API is Running"}
 
 
 @app.get("/predict")
