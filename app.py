@@ -10,7 +10,8 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Tesla Stock Prediction API is Running"}
+    return {"message": "Tesla Stock Prediction API is Running"}git config --global user.name "Muhammed Faheem"
+
 
 @app.get("/predict")
 def predict(days_ahead: int):
@@ -30,3 +31,6 @@ def predict(days_ahead: int):
         "lower_bound": float(prediction[0] - 2*sigma[0]),
         "upper_bound": float(prediction[0] + 2*sigma[0])
     }
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
